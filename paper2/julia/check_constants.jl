@@ -11,14 +11,14 @@ function check_constants()
     check("same inequality in integers: (1350400)^2 * 2 < (2*10^6)^2",
           big(1350400)^2 * 2 < big(2_000_000)^2)
 
-    # Step 1 of Theorem 3.9: with K = floor(s^(1-delta)/4) and beta* = K - ceil(log s) - 3,
-    # b <= b' <= K, block degree <= 2K, chain degree <= 3K <= s^(1-delta) for every f <= s.
+    # Step 1 of Theorem 3.9: with K = floor(s^(1-delta)/4) and beta* = K - ceil(log s) - 4,
+    # b <= b' <= K, block degree <= 2K, chain degree <= 3K <= s^(1-delta) for every f <= 2s.
     ok = true
     for δ in (0.05, 0.1, 0.25, 0.5), s in (2^14, 2^16, 2^20, 2^24, 2^30)
         K = floor(Int, s^(1 - δ) / 4)
-        βs = K - clog2(s) - 3
+        βs = K - clog2(s) - 4
         βs >= 1 || continue
-        for f in (K + 1, 2K, s)
+        for f in (K + 1, 2K, s, 2s)
             b = βs + clog2(K) + 2
             bp = βs + clog2(f) + 3
             ok &= b <= bp <= K && K + b <= 2K && b + 2bp <= 3K && 3K <= s^(1 - δ)
@@ -32,7 +32,7 @@ function check_constants()
         for e in 8:200
             n = 2.0^e
             K = floor(n^(1 - δ / 2) / 4)
-            if (2n)^(1 - δ) <= K - ceil(log2(n)) - 3
+            if (2n)^(1 - δ) <= K - ceil(log2(n)) - 4
                 n0 = e; break
             end
         end
