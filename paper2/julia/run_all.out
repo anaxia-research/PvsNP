@@ -1,0 +1,39 @@
+Chain encoding of weighted vertices (Lemma 3.8)
+  pass  chain sub-network has the tensor [z = phi(sum w_i y_i)] (300 random gates)
+  pass  block values < 2^b and partial sums < 2^b'
+Exact recovery from the residue mod 2^(s+2)
+  pass  |Z| <= 2^s is recovered from Z mod 2^(s+2)
+Circuits as gate networks (Lemma 3.3)
+  pass  Z(a) = C(a) for 60 random circuits of table and weighted gates
+  pass  size at most 2N + 4W + 6
+Unambiguous circuits (Lemma 3.5)
+  pass  unambiguous circuits: the network counts the unique witness
+Exact-kappa ambiguity
+  pass  circuits with 0 or kappa witnesses: Z = kappa * W
+Gap pairs with a switch edge (Lemma 3.6)
+  pass  gap pairs: Z = 2^(M+ + M-) (A - B)
+Power sums by gluing copies (Lemma 4.1(1))
+  pass  glued copies give sum_a Z(a)^r for r = 1..4
+  pass  z^2 (z - kappa)^2 >= 0 with equality iff z in {0, kappa}
+Clause count (Lemma 4.1(2))
+  pass  sum_S Z(V_S) = 2^-u sum_i prod_t (kappa eps_t + (1-2eps_t) Z(lambda_t))
+  pass  for values in {0,kappa}: sum_S Z(V_S) = 2^-u kappa^3 #violated clauses
+The gate I_G (Section 5)
+  pass  I_G is the exact gate with base-four weights below 4^|E| (Q_2, Q_3, all inputs)
+  pass  cut rank of I_{Q_3} >= 2^(induced split matching), 40 random cuts
+  pass  at least c_1 min(|A|,|B|) split edges (Q_3, h = 1, d = 3)
+  pass  e(S) <= |S| log2|S| / 2 for 3000 random subsets of Q_4
+Balanced bags in tree decompositions (Lemma 5.2)
+  pass  elimination-order tree decompositions are valid
+  pass  some bag leaves every component with at most half the weight (300 graphs)
+Constants
+  pass  1872*18 + 64 = 33760
+  pass  4 * 10 * 33760 * sqrt(2) < 2 * 10^6
+  pass  same inequality in integers: (1350400)^2 * 2 < (2*10^6)^2
+  pass  chain parameters: b <= b' <= K and degrees <= 3K <= s^(1-delta)
+  pass  weights fit the chain for n >= 2^59 at delta = 0.1
+  pass  weights fit the chain for n >= 2^23 at delta = 0.25
+  pass  weights fit the chain for n >= 2^12 at delta = 0.5
+  pass  weights fit the chain for n >= 2^12 at delta = 0.9
+
+checks passed: 26, failed: 0

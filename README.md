@@ -21,6 +21,7 @@
 | [`papers/`](papers) | the paper | |
 | [`lean/`](lean) | Lean 4 project over Mathlib, axiom audit | `cd lean && lake exe cache get && lake build && lake env lean audit.lean` |
 | [`julia/`](julia) | finite statements and constants | `julia julia/run_all.jl` |
+| [`paper2/`](paper2) | Lean 4 and Julia checks for the second paper, *Superlinear Lower Bounds for Unambiguous Circuits and Integer Tensor Networks* | see [`paper2/README.md`](paper2/README.md) |
 
 | Release | DOI |
 | :--- | :--- |

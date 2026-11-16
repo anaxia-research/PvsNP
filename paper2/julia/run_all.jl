@@ -1,0 +1,21 @@
+# Runs every check.  Usage: julia julia/run_all.jl
+using Random
+include("common.jl")
+include("contract.jl")
+include("circuits.jl")
+include("check_chain.jl")
+include("check_circuit.jl")
+include("check_verify.jl")
+include("check_rank.jl")
+include("check_constants.jl")
+
+rng = MersenneTwister(20261116)
+check_chain(rng)
+check_circuit(rng)
+check_verify(rng)
+check_rank(rng)
+check_bags(rng)
+check_constants()
+println()
+println("checks passed: ", TALLY.pass, ", failed: ", TALLY.fail)
+TALLY.fail == 0 || exit(1)

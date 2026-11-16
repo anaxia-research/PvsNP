@@ -1,0 +1,30 @@
+import PvsNP2
+
+#print axioms PvsNP2.block_value_bound
+#print axioms PvsNP2.block_value_fits
+#print axioms PvsNP2.chain_running_sum
+#print axioms PvsNP2.chain_unique
+#print axioms PvsNP2.chain_offset
+#print axioms PvsNP2.exact_recovery
+#print axioms PvsNP2.value_bound
+#print axioms PvsNP2.unambiguous_count
+#print axioms PvsNP2.circuit_size
+#print axioms PvsNP2.unambiguous_size
+#print axioms PvsNP2.gap_switch
+#print axioms PvsNP2.eqtree_edges
+#print axioms PvsNP2.coefficient
+#print axioms PvsNP2.sqrt_two_lt
+#print axioms PvsNP2.room_for_eta
+#print axioms PvsNP2.exponent_room
+#print axioms PvsNP2.tree_orientation_has_two_cycle
+#print axioms PvsNP2.final_inequality
+#print axioms PvsNP2.cube_constant
+#print axioms PvsNP2.sq_mul_sq_nonneg
+#print axioms PvsNP2.sq_mul_sq_eq_zero_iff
+#print axioms PvsNP2.test_expansion
+#print axioms PvsNP2.test_one_iff
+#print axioms PvsNP2.test_one_power_sums
+#print axioms PvsNP2.literal_factor
+#print axioms PvsNP2.three_binomials
+#print axioms PvsNP2.clause_sum
+#print axioms PvsNP2.clause_sum_zero_iff
